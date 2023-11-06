@@ -1,0 +1,70 @@
+[
+    {
+        "request": {
+            "command": "SetConnectionPubKey",
+            "data": "MIIBCgKCAQEAz0XeZiQAQJBVUfed+CeH4fcRJpLQMQ2zOUeNHHpf+RTpgEH69MN+fYOd5LUwvZ+SIZ+KRjlpN6lMtzlNcKizUXyqk7KcOpSQhXOUAzvSAdNrGl4ndFGL5yfH01U14ukA7Tn11Kc81zgNftK9UB/sRCwZnptrE87zayjZXHRciONDN936tPauT7/wNVlO8N2iZGN9c3lPffdTX9kpTGl0ifadlW4lG6DSQ8kNTzgesn4e8GGxUwsNA6HNCx/qhVP8/PUPC6tUWZNlPHpCfTWIHzmBM3N8t2sCwWH4qesR0dK1X5/Y+E46C1yP9IT3GE1DkxE7FofPCYCBTsKdq6PSCQIDAQAB"
+        },
+        "response": [
+            {
+                "command": "SetConnectionSymKey",
+                "data": "MIIEpAIBAAKCAQEAz0XeZiQAQJBVUfed+CeH4fcRJpLQMQ2zOUeNHHpf+RTpgEH69MN+fYOd5LUwvZ+SIZ+KRjlpN6lMtzlNcKizUXyqk7KcOpSQhXOUAzvSAdNrGl4ndFGL5yfH01U14ukA7Tn11Kc81zgNftK9UB/sRCwZnptrE87zayjZXHRciONDN936tPauT7/wNVlO8N2iZGN9c3lPffdTX9kpTGl0ifadlW4lG6DSQ8kNTzgesn4e8GGxUwsNA6HNCx/qhVP8/PUPC6tUWZNlPHpCfTWIHzmBM3N8t2sCwWH4qesR0dK1X5/Y+E46C1yP9IT3GE1DkxE7FofPCYCBTsKdq6PSCQIDAQABAoIBAQCBP91eLgbmO9qoYVNlYikutCVCu3wNirB/AGozHvBn3y14KCy4ootm80LrUj1RkYbLZrQP9E7zQaQwARCUNu6S2r13moInWWsBfMAIgC4Fq3N3Hs1VkGBARaMq2lDe7VMBmwn7kEm1HyPzOLCKnU10eVeEev/7eyp5YSChsYHebVGoCvlxs0Fe3x2yml1WmobvPdCu+cwDbryGaGpNPIvrqx2j1dYjyFWlffP5qNxMy5ecDZYS0KMT9dmEILVcToBMVbKfjr0uJe81ti4Hd0vB+Sg7sXvZ0o8m931SkcueSGRgb7CbJUYo6P8f4hl75lcyWta107KSB+qYuxTeaU09AoGBAOvrkmkPcZECqumF1FoR9iQTFVOqO2GhOjbiOsYxeygW2WCTKsWCRQXjefa0jCfE+VLfwpgVDtzDcsub8m0UJZHvdVqNNdFn+FTQcUtE9fmA1B1lk6TPVzl7tAkNsCQoUeNOLpo+5O6xzJKN7Ov3CLVjEhyN51ABLFdErgu2R/aPAoGBAODqGxZJibsSLs/2j8AJ2Ks9YvxozRqzO8ljfBei0lPwuWQUQEQ7qWDIcqjuvrHhIpJS06rLi7vbkwrRd9ywhQ4K5jNWLYS3nfmKgHN8Po9H80eMFtvQQhXS7wNfn4MGmIOVss/3sn1n9oKI+HdjZN83lRJjs/tSm1wEfqNzibnnAoGBAL6E/jajxyXBDr8JWaTnTmxxkM6A8fV022tJJQe7G+cTFLceAfOAsTcBLhRiV7EiK+qWUzK4BsmXeRQeuxcFpxWEWLQox2Z13SC5OFT9utqkBCg9SI9W9eyxDoIlMLLycLbtA0uDMSPmJ/vOa59fXwQEnrK6kiuU1vceuqMwsErXAoGABSo7HwLnT812F76AxJc1S5FoUYWSmDdfext2wRAzJkxT5ZF1fFumYxuXTnvVEz6pTZTrWXO9LL45HTl8OCwxkgX8DVfASdjxnsZodr52rVGoq47zA28/5UJnzLsIbbjcDcGFTrNQfQLDLXI5ynwU1+9t0/NIMdBO0wkjY1uG4ScCgYBGskdWPbJpSsW9H0gwt3TB8W23MrREC3MNnS149xmfMP8yzdLcspzSt9l784D4f6abwTEooHbX2gyzRdH1fgHxO4Nw4cx+e2SVXADSKZRhOIUN9ya6o3tRqRquwLcAsZFznJo5CB+8ZXXennSe2ig0PONV/xAjesE2+Huh5rlq1g=="
+            }
+        ]
+    },
+    {
+        "request": {
+            "command": "Register",
+            "data": {
+                "userName": "Rintaro",
+                "password": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B",
+                "email": "yzr21@mails.tsinghua.edu.cn",
+                "emailCode": 123456
+            }
+        },
+        "response": [
+            {
+                "command": "RegisterResponse",
+                "data": {
+                    "state": "Success",
+                    "userId": 1
+                }
+            }
+        ]
+    },
+    {
+        "request": {
+            "command": "Login",
+            "data": {
+                "userName": "Rintaro",
+                "password": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B",
+                "email": "yzr21@mails.tsinghua.edu.cn"
+            }
+        },
+        "response": [
+            {
+                "command": "LoginResponse",
+                "data": {
+                    "state": "Success",
+                    "userId": 1
+                }
+            }
+        ]
+    },
+    {
+        "request": {
+            "command": "UpdateUserInfo",
+            "data": {
+                "type": "UserName",
+                "newName": "update"
+            }
+        },
+        "response": [
+            {
+                "command": "UpdateUserInfoResponse",
+                "data": {
+                    "state": "Success"
+                }
+            }
+        ]
+    }
+]

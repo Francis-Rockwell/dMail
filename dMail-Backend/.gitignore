@@ -1,0 +1,10 @@
+/target
+/config/*
+.env
+*.stdout
+*.stderr
+config.json
+cobertura.xml
+.vscode/
+*.pptx
+dump.rdb

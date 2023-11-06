@@ -1,0 +1,61 @@
+image: registry.secoder.net/tool/deployer
+stages:
+  - test
+  - build
+  - deploy
+
+.test:
+  image: rust:1.68
+  stage: test
+  before_script:
+    - rustup install nightly && rustup default nightly
+    - rustup component add rustfmt --toolchain nightly
+    #- cargo install cargo-tarpaulin
+  only:
+    - master
+
+unit-test:
+  extends: .test
+  script:
+    - SUFFIX=$RANDOM
+    - curl "http://api.secoder.net/static/sonar-scanner.tar.gz" -s -o "/tmp/sonar-$SUFFIX.tar.gz"
+    - tar -xf "/tmp/sonar-$SUFFIX.tar.gz" -C /opt
+    - /opt/sonar-scanner/bin/sonar-scanner
+
+style-test:
+  extends: .test
+  script:
+    - cargo fmt --all -- --check
+
+build_image:
+  image: registry.secoder.net/tool/deployer
+  stage: build
+  script:
+    - export BUILD_IMAGE_NAME=$CI_REGISTRY_IMAGE
+    - export BUILD_IMAGE_TAG=$CI_COMMIT_REF_SLUG
+    - export BUILD_IMAGE_USERNAME=$CI_REGISTRY_USER
+    - export BUILD_IMAGE_PASSWORD=$CI_REGISTRY_PASSWORD
+    - deployer build
+  only:
+    - master
+
+deploy:
+  stage: deploy
+  before_script:
+    - "command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )"
+    - eval $(ssh-agent -s)
+    - echo "$DEPLOY_SSH_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan $DEPLOY_ADDRESS >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+
+  script:
+    - ssh $DEPLOY_USER@$DEPLOY_ADDRESS "
+      sudo docker login -u $REGISTRY_USER -p $REGISTRY_PWD $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG &&
+      sudo docker stop $CI_COMMIT_REF_SLUG | true &&
+      sudo docker rm $CI_COMMIT_REF_SLUG | true &&
+      sudo docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG &&
+      sudo docker run -d -p $DEPLOY_PORT:8080 --name $CI_COMMIT_REF_SLUG -v /home/ubuntu/dMail/config:/user/dMail/config $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
+  only:
+    - master

@@ -1,0 +1,11 @@
+pub const SOCKET_WRITE_MESSAGE_FAILED: &str = "socket_write_message_failed";
+pub const SOCKET_READ_MESSAGE_FAILED: &str = "socket_read_message_failed";
+pub const JSON_TO_STRING_FAILED: &str = "json_to_string_failed";
+pub const STRING_TO_JSON_FAILED: &str = "string_to_json_failed";
+pub const ENCODE_FAILED: &str = "encode_falied";
+pub const DECODE_FAILED: &str = "decode_failed";
+pub const TYPE_PARSE_FAILED: &str = "type_parse_failed";
+pub const CREATE_CONFIG_FAILED: &str = "create_config_failed";
+pub const JSON_FROM_FILE_FAILED: &str = "json_from_file_failed";
+pub const FILE_ERR: &str = "file_err";
+pub const CONNECTION_FAILED: &str = "connection_failed";

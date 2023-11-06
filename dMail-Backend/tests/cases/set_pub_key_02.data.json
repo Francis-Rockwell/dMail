@@ -1,0 +1,19 @@
+[
+    {
+        "request": {
+            "command": "Register",
+            "data": {
+                "userName": "Rintaro",
+                "password": "testtset123",
+                "email": "francis_rockwell@foxmail.com",
+                "emailCode": 123456
+            }
+        },
+        "response": [{
+            "command": "SetConnectionPubKeyResponse",
+            "data": {
+                "state": "NeedSetPubKey"
+            }
+        }]
+    }
+]

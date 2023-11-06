@@ -1,0 +1,7 @@
+/documentatoins
+/target
+/config
+.gitignore
+.README.md
+.gitlab-ci.yml
+dump.rdb

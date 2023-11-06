@@ -1,0 +1,53 @@
+[
+    {
+        "request": {
+            "command": "SetConnectionPubKey",
+            "data": "MIIBCgKCAQEA24vzG/N/3Dt03m8I3bgoqjeODCZuVL8CiJ2RA1OGqazECSiVaUXPgBBLQ20D1o5G/wdmYEupd5x0qhcJ2ZeCVTLcP4Pa9+9fRRzSv6o9z4VTE6yILV6cY3ac6nqn3ZhXSUf9x4KHfN6d8jHN3ZTy4LvmqAEw5h2EWC7PAecZCIywDRe16QbMOkeawoUJaE1q7QVVntIDqw6N1ZTgouEaACku0TVmajLy7DTC96AeEwWVcbjeIHdxObMySEVysZrHcXrFTooiBNCit3ezgNhW+LIzHvpbYkquIb68oFk8FztfWizOcKPVRCV3sADeOuFLYVyxfPDk8VoFufmmZ1MGkwIDAQAB"
+        },
+        "response": [
+            {
+                "command": "SetConnectionSymKey",
+                "data": "MIIEowIBAAKCAQEA24vzG/N/3Dt03m8I3bgoqjeODCZuVL8CiJ2RA1OGqazECSiVaUXPgBBLQ20D1o5G/wdmYEupd5x0qhcJ2ZeCVTLcP4Pa9+9fRRzSv6o9z4VTE6yILV6cY3ac6nqn3ZhXSUf9x4KHfN6d8jHN3ZTy4LvmqAEw5h2EWC7PAecZCIywDRe16QbMOkeawoUJaE1q7QVVntIDqw6N1ZTgouEaACku0TVmajLy7DTC96AeEwWVcbjeIHdxObMySEVysZrHcXrFTooiBNCit3ezgNhW+LIzHvpbYkquIb68oFk8FztfWizOcKPVRCV3sADeOuFLYVyxfPDk8VoFufmmZ1MGkwIDAQABAoIBAExRpBstVF88k+3W72AT6p7xXQHAQk5XcAwJqiVb3c4R7ru4TeggindcMq2nsdPd9bQl4GLNKoYX7z5Jb/UiA/6WBZZWwcG6hoXB9UkHZyFCmZSXP2d2Iis5SmcAaGZR1NX2nrPCHlM8F+/ffE7wvlV9PDte3p6/2AfHjdJ9gWhEyrUr1/USV9QLlD8FuViRPPufqdHFp5ZH5I2peFgbjPYzWiOzt8dCUUcNtZwXJo60RaHHdFQei8SV+tjZLtsZ4k6TK4SzuKYHuLJaJoQvM5m2ykw7n67N0IZ2n045SkE3KqDdeMsf87EuSxQDc7o/40PPwKpm7xYw5k4N9j4LpDECgYEA++nXEwzauNiHv6njNlAA7sjFpMi/b2YIdt+eK+rKyhgGv2PSFoLNhCe2EbDHylNi4q+QR1whONnBOwg9Hd3eD+d/mr0UFl/2tDJzBN/kRnc9T+J28IbXJRN1Yl3/aZLKLh4HnIo89mt4cgtAlWeXlJrmNVAvnQtgGiiQgABOA00CgYEA3xux79KjznM34rVGglIM0kv5sN1zLdtbgOhd4iqAvIad5ygDPfsx051sl/Nvl3EI+R+jQAuGNAZMuMNv3zITADbg6m3e+7w4UFj7gMc6xQzylXzbYZIaKg46i31tkk3FC0x10AUAvW/+IJvYcmIGHjQUOVAzaLKUIWHaXr6OgV8CgYApAYuNAk6oQDb4sALYWHWOaQgjJrpiu80s7IGmzHVuKDMQ/IK6P1iM5pnwj0I2YRR7qfBmbUzLIEcgANtR/Uekdx6CZbzbV4ulEYE/jeJuxgIo+sg5pvlmg6Bb/skQumBG2YSLqsT5p8zXY5WDvHUkL4LBsufNPIjMOUYsT+BjEQKBgAxqXyGIaEMx2DdOfSj9ZedCARgdiq5Pmaz3wVm3ochb+WeGq3+EfgZXqVZfXqNfz+8FGrGSsposi5JwlcYm5DXL2AJTsOfzVnLqMLy+2X9jtBArjY3Fcp1Kg2mFxlYw67kwPRIhZSQlmk+4PHhJCiweG84Ar4uw/FtLNbq2AfojAoGBAIH7aN2kjkhMeVS3WVHZAQE8BS4gSSPnTOzAp+3jP/7GvMVL2iiOK3RITeVl7EG5eXQ9NhtsHJv7bALxBX8kDC1/E1mncYHpbjM3p9JqlrwlbVobhsUOM43w6nNHtN7AaP3sPOV9UirWO07hoGoZHsctJg7OTFZ5/GTJkghOPWFu"
+            }
+        ]
+    },
+    {
+        "request": {
+            "command": "Register",
+            "data": {
+                "userName": "Rintaro",
+                "password": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B",
+                "email": "francis_rockwell@foxmail.com",
+                "emailCode": 123456
+            }
+        },
+        "response": [
+            {
+                "command": "RegisterResponse",
+                "data": {
+                    "state": "Success",
+                    "userId": 1
+                }
+            }
+        ]
+    },
+    {
+        "request": {
+            "command": "Register",
+            "data": {
+                "userName": "Rin",
+                "password": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B",
+                "email": "francis_rockwell@foxmail.com",
+                "emailCode": 123456
+            }
+        },
+        "response": [
+            {
+                "command": "RegisterResponse",
+                "data": {
+                    "state": "EmailRegistered"
+                }
+            }
+        ]
+    }
+]
